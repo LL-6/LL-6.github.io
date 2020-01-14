@@ -172,8 +172,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>创建hexo的个人博客<br>先下载nodejs 网站地址nodejs.org（npm为包管理器）<br>本人cmder   node -v（查看node版本）<br>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>cnpm install -g hexo-cli(安装hexo的框架)<br>创建空文件夹<br>进入空文件夹<br>hexo init（生成博客）<br>hexo s（启动博客）<br>浏览器输入地址</p>
-<p>hexo n “标题”<br>cd source/_posts/</p>
+        <p>#创建hexo的个人博客</p>
+<p>*<em>1:下载nodejs 网站地址nodejs.org *</em></p>
+<p><strong>2:打开终端</strong><br>(1)node -v //查看node版本<br>(2)npm -v  //查看npm包的版本)<br>(3)npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a> //国内镜像源很慢，所以安装淘宝的镜像源<br>(4)cnpm install -g hexo-cli //安装hexo的框架<br>(5)mkdir blog(创建空文件夹),cd blog(进入空文件夹)<br>(6)hexo init (在blog中生成文件)  //生成博客,初始化博客<br>(7)hexo s（启动博客）//生成本地地址localhost:4000</p>
+<p><strong>3:写博客</strong><br>(1)终端中  hexo n “我的第一篇博客”<br>(2)cd source/_posts/<br>(3)vim 我的第一篇博客<br>(4)退回blog目录下<br>     hexo clean(清理一下)<br>     hexo g（生成博客文章）<br>(5)hexo s(本地出现我的第一篇博客)</p>
+<p><strong>4:将博客部署到github上</strong><br>(1)在github新建仓库  仓库名 昵称.github.io //昵称名必须按照格式<br>(2)打开终端 在blog目录下cnpm install –save hexo-deployer-git  //安装git部署插件<br>(3)vim  _config.yml  //文件最底部，找到Deployment<br>(4)添加 type: git<br>            repo: 创建的仓库地址<br>            branch: master<br>保存退出<br>(5)hexo d //部署到远端<br>  输入github的账号密码<br>(6)在浏览器中输入 昵称.github.io</p>
+<p><strong>5更换博客主题（推荐主题 github.com/litten/hexo-theme-yilia)</strong><br>(1)在终端里 git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilla<br>(2)vim _config.yml<br>(3)找到 themes:yilia<br>(4)hexo clean<br>(5)hexo g<br>(6)hexo s(本地主题已经改变)<br>(7)hexo d //部署到github</p>
 
       
 
